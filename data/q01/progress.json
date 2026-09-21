@@ -2,11 +2,13 @@
   "stage": "Q01_asset_case_inspection",
   "updated": "2026-09-21",
   "completed_assets": [
-    "A04"
+    "A04",
+    "A06"
   ],
-  "current_asset": "A04",
-  "next_asset": "A06",
+  "current_asset": "A06",
+  "next_asset": "A09",
   "notes": {
-    "A04": "MultiChallenge accepted as case-source candidate; current ScaleAI 266-row revision preferred; no Full cases accepted yet."
+    "A04": "MultiChallenge accepted as case-source candidate; current ScaleAI 266-row revision preferred; no Full cases accepted yet.",
+    "A06": "LongMemEval cleaned v1 accepted as a case-source candidate with mandatory case-level label audit; central B06 historical-fidelity gap remains open."
   }
 }
