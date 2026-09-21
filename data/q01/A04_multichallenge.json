@@ -1,0 +1,41 @@
+{
+  "asset_id": "A04",
+  "asset_name": "MultiChallenge",
+  "q01_status": "accepted_for_case_inspection",
+  "preferred_source": {
+    "provider": "ScaleAI",
+    "repository": "ScaleAI/MultiChallenge",
+    "data_revision": "9d9e0fd9ef535fb71df41740b2e9e6bdb0aa7ac3",
+    "metadata_revision_observed": "670fd81f270314d0f8f82b34fcfe2187fd28f699",
+    "rows": 266,
+    "language": "en",
+    "license": "CC-BY-4.0"
+  },
+  "historical_source": {
+    "repository": "ekwinox117/multi-challenge",
+    "revision": "5ccefcca6a39020d66c1383c4e6a809cb07afa33",
+    "rows": 273,
+    "license_file_present": false,
+    "historical_judge": "gpt-4o-2024-08-06"
+  },
+  "mapping": {
+    "B01": "direct_narrow",
+    "B05": "case_level_direct",
+    "B10": "direct_fixed_record",
+    "B11": "partial",
+    "B06": "not_directly_covered",
+    "B02": "not_established",
+    "B03": "not_established",
+    "B07": "not_established"
+  },
+  "representative_case_candidates": [
+    "674552683acc22154b07a598",
+    "67455268bc2ba9e69b8618f8",
+    "674552684d7f0f0dad442da6",
+    "67455bc84f79e78f4a63c837"
+  ],
+  "accepted_full_cases": 0,
+  "accepted_short_cases": 0,
+  "scorer_status": "pending_q04_q06_validation",
+  "next_action": "inspect representative current records case-by-case"
+}
