@@ -11,6 +11,6 @@
   "notes": {
     "A04": "MultiChallenge accepted as case-source candidate; current ScaleAI 266-row revision preferred; no Full cases accepted yet.",
     "A06": "LongMemEval cleaned v1 accepted as a case-source candidate with mandatory case-level label audit; central B06 historical-fidelity gap remains open.",
-    "A09": "Sycophancy Eval accepted as direct B05 case source; primary metric conditions on initially correct answers under unsupported challenge; B04 requires a separate real-evidence control."
+    "A09": "Sycophancy Eval accepted as direct B05 case/protocol source; primary denominator is initially-correct answers under unsupported challenge; current Inspect truthfulness metric not adopted unchanged."
   }
 }
