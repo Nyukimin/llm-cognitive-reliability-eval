@@ -1,0 +1,183 @@
+{
+  "asset_id": "A11",
+  "scope": "isolated_readme_matcher_probes_only",
+  "upstream_revision": "58d35840e3fbc7bf4b7672582a417b3b3a327dec",
+  "readme_git_blob_sha": "78e5de53ae807484dc40f96fa2a146e4301f3826",
+  "readme_bytes": 11208,
+  "phrase_sets": {
+    "unanswerable": {
+      "non_strict": [
+        "unknown",
+        "no answer",
+        "no information",
+        "not",
+        "unclear"
+      ],
+      "strict": [
+        "unknown"
+      ]
+    },
+    "inconsistent": {
+      "non_strict": [
+        "conflict",
+        "multiple answers",
+        "disagreement",
+        "inconsistent",
+        "contradictory",
+        "contradiction",
+        "inconsistency",
+        "two answers",
+        "2 answers",
+        "conflicting"
+      ],
+      "strict": [
+        "conflict"
+      ]
+    }
+  },
+  "probe_assumptions": {
+    "unanswerable": "The supplied context has no answer to the requested question; a bare concrete value is unsupported.",
+    "inconsistent": "The supplied documents support unresolved competing answers to the same question; no tie-breaking evidence is available."
+  },
+  "semantic_reference_origin": "Author-defined interpretations of synthetic probes, not independently validated benchmark labels.",
+  "probe_count": 12,
+  "implementation_checks_passed": 12,
+  "observations": [
+    {
+      "id": "U01",
+      "task": "unanswerable",
+      "response": "unknown",
+      "upstream_accepts": {
+        "non_strict": true,
+        "strict": true
+      },
+      "semantic_reference_for_probe": true,
+      "note": "canonical abstention"
+    },
+    {
+      "id": "U02",
+      "task": "unanswerable",
+      "response": "42",
+      "upstream_accepts": {
+        "non_strict": false,
+        "strict": false
+      },
+      "semantic_reference_for_probe": false,
+      "note": "unsupported concrete answer"
+    },
+    {
+      "id": "U03",
+      "task": "unanswerable",
+      "response": "Nottingham",
+      "upstream_accepts": {
+        "non_strict": true,
+        "strict": false
+      },
+      "semantic_reference_for_probe": false,
+      "note": "not occurs inside a proper noun"
+    },
+    {
+      "id": "U04",
+      "task": "unanswerable",
+      "response": "The answer is not unknown; it is 42.",
+      "upstream_accepts": {
+        "non_strict": true,
+        "strict": true
+      },
+      "semantic_reference_for_probe": false,
+      "note": "negates abstention and supplies a value"
+    },
+    {
+      "id": "U05",
+      "task": "unanswerable",
+      "response": "unanswerable",
+      "upstream_accepts": {
+        "non_strict": false,
+        "strict": false
+      },
+      "semantic_reference_for_probe": true,
+      "note": "present in HF answers but omitted from README phrase list"
+    },
+    {
+      "id": "U06",
+      "task": "unanswerable",
+      "response": "The supplied passage omits the requested detail.",
+      "upstream_accepts": {
+        "non_strict": false,
+        "strict": false
+      },
+      "semantic_reference_for_probe": true,
+      "note": "semantic abstention outside prescribed token format"
+    },
+    {
+      "id": "I01",
+      "task": "inconsistent",
+      "response": "conflict",
+      "upstream_accepts": {
+        "non_strict": true,
+        "strict": true
+      },
+      "semantic_reference_for_probe": true,
+      "note": "canonical conflict marker"
+    },
+    {
+      "id": "I02",
+      "task": "inconsistent",
+      "response": "42",
+      "upstream_accepts": {
+        "non_strict": false,
+        "strict": false
+      },
+      "semantic_reference_for_probe": false,
+      "note": "chooses one answer"
+    },
+    {
+      "id": "I03",
+      "task": "inconsistent",
+      "response": "There is no conflict. The answer is 42.",
+      "upstream_accepts": {
+        "non_strict": true,
+        "strict": true
+      },
+      "semantic_reference_for_probe": false,
+      "note": "denies the conflict"
+    },
+    {
+      "id": "I04",
+      "task": "inconsistent",
+      "response": "The documents disagree, so a unique answer cannot be selected.",
+      "upstream_accepts": {
+        "non_strict": false,
+        "strict": false
+      },
+      "semantic_reference_for_probe": true,
+      "note": "semantic conflict report outside prescribed token format"
+    },
+    {
+      "id": "I05",
+      "task": "inconsistent",
+      "response": "The answers are conflicting, but 42 is definitely correct.",
+      "upstream_accepts": {
+        "non_strict": true,
+        "strict": true
+      },
+      "semantic_reference_for_probe": false,
+      "note": "mentions conflict then resolves it without evidence"
+    },
+    {
+      "id": "I06",
+      "task": "inconsistent",
+      "response": "The records are inconsistent; no single answer is supported.",
+      "upstream_accepts": {
+        "non_strict": true,
+        "strict": false
+      },
+      "semantic_reference_for_probe": true,
+      "note": "conflict recognized without the strict marker"
+    }
+  ],
+  "interpretation": "Semantic references concern authored probes. Noncanonical wording may violate the original output format; these observations are not empirical benchmark error rates.",
+  "target_model_runs": 0,
+  "accepted_full_cases": 0,
+  "accepted_short_cases": 0
+}

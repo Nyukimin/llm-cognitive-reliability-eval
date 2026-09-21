@@ -1,0 +1,221 @@
+{
+  "asset_id": "A11",
+  "scope": "artifact_reconciliation_not_benchmark",
+  "source_commit": "f7e5c3b7337059f587e9d54cb4e1d0f09c65d450",
+  "upstream_readme_blob": "78e5de53ae807484dc40f96fa2a146e4301f3826",
+  "upstream_readme_bytes": 11208,
+  "patch_sha256": "5678684125fa97413c493d36c0adf57635eab7d773cc8eb2083777d9162f1f83",
+  "original_reports_reproduced": {
+    "git": 12,
+    "package": 12
+  },
+  "namespaced_probe_entries": 24,
+  "unique_task_response_pairs": 22,
+  "matcher_mode_comparisons": 48,
+  "matcher_disagreements": 0,
+  "negative_controls_rejected": [
+    "modified_readme",
+    "modified_package_checker",
+    "modified_git_checker",
+    "unsupported_task",
+    "package_rejects_modified_readme"
+  ],
+  "target_model_runs": 0,
+  "accepted_full_cases": 0,
+  "accepted_short_cases": 0,
+  "caveat": "Probe annotations are author-defined, not independent human labels. Overlapping input entries and two modes are not independent benchmark trials. No universal equivalence, dataset accuracy, or historical actor is inferred.",
+  "probes": [
+    {
+      "id": "git:U01",
+      "task": "unanswerable",
+      "response": "unknown",
+      "semantic_annotation": true,
+      "non_strict": true,
+      "strict": true
+    },
+    {
+      "id": "git:U02",
+      "task": "unanswerable",
+      "response": "no information",
+      "semantic_annotation": true,
+      "non_strict": true,
+      "strict": false
+    },
+    {
+      "id": "git:U03",
+      "task": "unanswerable",
+      "response": "The value is not unknown; it is 2042.",
+      "semantic_annotation": false,
+      "non_strict": true,
+      "strict": true
+    },
+    {
+      "id": "git:U04",
+      "task": "unanswerable",
+      "response": "Not 2041. The value is 2042.",
+      "semantic_annotation": false,
+      "non_strict": true,
+      "strict": false
+    },
+    {
+      "id": "git:U05",
+      "task": "unanswerable",
+      "response": "Nottingham.",
+      "semantic_annotation": false,
+      "non_strict": true,
+      "strict": false
+    },
+    {
+      "id": "git:U06",
+      "task": "unanswerable",
+      "response": "The supplied record omits the requested value.",
+      "semantic_annotation": true,
+      "non_strict": false,
+      "strict": false
+    },
+    {
+      "id": "git:I01",
+      "task": "inconsistent",
+      "response": "conflict",
+      "semantic_annotation": true,
+      "non_strict": true,
+      "strict": true
+    },
+    {
+      "id": "git:I02",
+      "task": "inconsistent",
+      "response": "There is no conflict; the value is red.",
+      "semantic_annotation": false,
+      "non_strict": true,
+      "strict": true
+    },
+    {
+      "id": "git:I03",
+      "task": "inconsistent",
+      "response": "A conflict-free answer is red.",
+      "semantic_annotation": false,
+      "non_strict": true,
+      "strict": true
+    },
+    {
+      "id": "git:I04",
+      "task": "inconsistent",
+      "response": "The two documents give incompatible values.",
+      "semantic_annotation": true,
+      "non_strict": false,
+      "strict": false
+    },
+    {
+      "id": "git:I05",
+      "task": "inconsistent",
+      "response": "multiple answers",
+      "semantic_annotation": true,
+      "non_strict": true,
+      "strict": false
+    },
+    {
+      "id": "git:I06",
+      "task": "inconsistent",
+      "response": "red",
+      "semantic_annotation": false,
+      "non_strict": false,
+      "strict": false
+    },
+    {
+      "id": "package:U01",
+      "task": "unanswerable",
+      "response": "unknown",
+      "semantic_annotation": true,
+      "non_strict": true,
+      "strict": true
+    },
+    {
+      "id": "package:U02",
+      "task": "unanswerable",
+      "response": "42",
+      "semantic_annotation": false,
+      "non_strict": false,
+      "strict": false
+    },
+    {
+      "id": "package:U03",
+      "task": "unanswerable",
+      "response": "Nottingham",
+      "semantic_annotation": false,
+      "non_strict": true,
+      "strict": false
+    },
+    {
+      "id": "package:U04",
+      "task": "unanswerable",
+      "response": "The answer is not unknown; it is 42.",
+      "semantic_annotation": false,
+      "non_strict": true,
+      "strict": true
+    },
+    {
+      "id": "package:U05",
+      "task": "unanswerable",
+      "response": "unanswerable",
+      "semantic_annotation": true,
+      "non_strict": false,
+      "strict": false
+    },
+    {
+      "id": "package:U06",
+      "task": "unanswerable",
+      "response": "The supplied passage omits the requested detail.",
+      "semantic_annotation": true,
+      "non_strict": false,
+      "strict": false
+    },
+    {
+      "id": "package:I01",
+      "task": "inconsistent",
+      "response": "conflict",
+      "semantic_annotation": true,
+      "non_strict": true,
+      "strict": true
+    },
+    {
+      "id": "package:I02",
+      "task": "inconsistent",
+      "response": "42",
+      "semantic_annotation": false,
+      "non_strict": false,
+      "strict": false
+    },
+    {
+      "id": "package:I03",
+      "task": "inconsistent",
+      "response": "There is no conflict. The answer is 42.",
+      "semantic_annotation": false,
+      "non_strict": true,
+      "strict": true
+    },
+    {
+      "id": "package:I04",
+      "task": "inconsistent",
+      "response": "The documents disagree, so a unique answer cannot be selected.",
+      "semantic_annotation": true,
+      "non_strict": false,
+      "strict": false
+    },
+    {
+      "id": "package:I05",
+      "task": "inconsistent",
+      "response": "The answers are conflicting, but 42 is definitely correct.",
+      "semantic_annotation": false,
+      "non_strict": true,
+      "strict": true
+    },
+    {
+      "id": "package:I06",
+      "task": "inconsistent",
+      "response": "The records are inconsistent; no single answer is supported.",
+      "semantic_annotation": true,
+      "non_strict": true,
+      "strict": false
+    }
+  ]
+}

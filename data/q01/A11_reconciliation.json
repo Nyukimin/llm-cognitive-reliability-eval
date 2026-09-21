@@ -1,0 +1,114 @@
+{
+  "asset_id": "A11",
+  "reconciliation_version": "1",
+  "date": "2026-09-21",
+  "base_main_observed": "f7e5c3b7337059f587e9d54cb4e1d0f09c65d450",
+  "original_patch_base": "90289d4b4a44dabc19621c99a82dcef3c4fcca0d",
+  "original_patch_sha256": "5678684125fa97413c493d36c0adf57635eab7d773cc8eb2083777d9162f1f83",
+  "original_zip_sha256": "af79e030cb27c92c4c3df5c5c88578ef63cd279da45da366eb0b8db21576700a",
+  "patch_status": "superseded_do_not_apply",
+  "canonical_scope": "Existing A11 source report plus research/q01/A11_reconciliation.md; archive is historical input, not a second baseline.",
+  "historical_operation_cause": {
+    "status": "unresolved",
+    "unknown": [
+      "actor_and_tool_request_that_published_f7e5c3b",
+      "whether_f7e5c3b_was_on_main_at_the_earlier_pending_report"
+    ],
+    "not_inferred_from_commit_author_or_current_presence": true
+  },
+  "file_disposition": [
+    {
+      "path": "data/q01/A11_faitheval.json",
+      "bytes": 6212,
+      "sha256": "943fd05ac3ca10a0203cd9d9c9912505f90f7bcd52b5952bf5b53e7ba5fe9dd7",
+      "git_blob_sha": "0a94b832670b9b3ec1d8ab44a7bc99f01686bccc",
+      "github_before_blob": "0e8abe14a0572dbe4a3e3372e0cbf0082f300b0b",
+      "archive_path": "archives/a11_patch_5678684125fa/files/data/q01/A11_faitheval.json",
+      "action": "archive_supplied_bytes; preserve_existing_bytes; supplement_with_reconciliation"
+    },
+    {
+      "path": "data/q01/A11_local_checks.json",
+      "bytes": 5183,
+      "sha256": "20d704d30a160e2343d520ec9f7a0876c04ad2fe36b98270f685692aae7b89fc",
+      "git_blob_sha": "f6d0182c6bcbbf3eb7f8bdc309a8ce8f12d5f6bd",
+      "github_before_blob": "b9b2dfbfd0ad54064bfd2969e244a997ccd2387c",
+      "archive_path": "archives/a11_patch_5678684125fa/files/data/q01/A11_local_checks.json",
+      "action": "archive_supplied_bytes; preserve_existing_bytes; supplement_with_reconciliation"
+    },
+    {
+      "path": "data/q01/progress.json",
+      "bytes": 1635,
+      "sha256": "9a81f4d3564c70c098288cd885edb7c31a7cfed0e85ac66b629f2dd04fa209aa",
+      "git_blob_sha": "de7d75cb4ffeb07e643e0012c009ca9cd9899d79",
+      "github_before_blob": "40ca711fbd60a7552d5992ceb2bb9ad9190c9071",
+      "archive_path": "archives/a11_patch_5678684125fa/files/data/q01/progress.json",
+      "action": "archive_supplied_bytes; preserve_existing_record; append_reconciliation_links"
+    },
+    {
+      "path": "research/q01/A11_faitheval_adoption.md",
+      "bytes": 14482,
+      "sha256": "bc7469d7efcafacd1f4300c7be508ca9f98cac8edfa22ca1220d87444a74f1d9",
+      "git_blob_sha": "1e1ed74a78689763494556859ecdcc2073bd5647",
+      "github_before_blob": "09630b3a27675caa35a999f4c64a19b5c1a90853",
+      "archive_path": "archives/a11_patch_5678684125fa/files/research/q01/A11_faitheval_adoption.md",
+      "action": "archive_supplied_bytes; preserve_existing_bytes; supplement_with_reconciliation"
+    },
+    {
+      "path": "research/q01/README.md",
+      "bytes": 4352,
+      "sha256": "a97deb9221d000fcd8574e00f75a45055bff2b050306d5207c62a6eb1d37444c",
+      "git_blob_sha": "8657bcfd4b62a8435c508e77e8c4c086d08260b7",
+      "github_before_blob": "00e088a7995e9a2dd9e64876cbcd5ec2970f4b27",
+      "archive_path": "archives/a11_patch_5678684125fa/files/research/q01/README.md",
+      "action": "archive_supplied_bytes; preserve_existing_record; append_reconciliation_links"
+    },
+    {
+      "path": "scripts/q01/check_faitheval_contract.py",
+      "bytes": 7438,
+      "sha256": "3bb79d2a5541f16bf644072b4478067a9dc2a7dadd0a38984c7b8e3728041498",
+      "git_blob_sha": "8c52ec0f5b135a6aea594940bdf7be97c45c73fe",
+      "github_before_blob": "978c9472c890ca2b8b6c914610270b9b67dbaa5f",
+      "archive_path": "archives/a11_patch_5678684125fa/files/scripts/q01/check_faitheval_contract.py",
+      "action": "archive_supplied_bytes; preserve_existing_bytes; supplement_with_reconciliation"
+    }
+  ],
+  "resolved": {
+    "B14": "partial_information_insufficiency_and_conflict_only_not_general_clarification",
+    "probe_ids": "namespace_git_and_package; do_not_merge_by_U01_or_I01",
+    "publisher_parquet_hashes": "retained_in_archived_A11_json_as_reported_metadata_not_verified_local_hashes",
+    "additional_U_preview_ids": [
+      "4d34e1d759844a3a8b60fe75199310e2",
+      "bd4ac80e6ab34822bd30bc62c0aa84f0"
+    ],
+    "additional_U_preview_status": "prior_package_reports_complete_display; no_new_full_record_retrieval_or_label_acceptance",
+    "case_identity": "asset/task/revision/qid; preserve common-source dependence",
+    "original_adoption_decision": "conditional_source_candidate; no_unchanged_matcher_adoption; public_data_rights_hold"
+  },
+  "validation": {
+    "script": "scripts/q01/check_faitheval_reconciliation.py",
+    "result": "data/q01/A11_reconciliation_checks.json",
+    "original_reports_reproduced": [
+      12,
+      12
+    ],
+    "namespaced_entries": 24,
+    "unique_task_response_pairs": 22,
+    "mode_comparisons": 48,
+    "disagreements": 0,
+    "negative_controls": 5,
+    "archive_payload_files_verified": 6,
+    "patch_replay": {
+      "base_blob_checks": 2,
+      "reconstructed_files_verified": 6,
+      "repeat_apply_rejected": true,
+      "patch_sha256": "5678684125fa97413c493d36c0adf57635eab7d773cc8eb2083777d9162f1f83"
+    }
+  },
+  "publication": "This record describes the verified payload; remote publication is established by the commit and a later ref read, not by this field.",
+  "unchanged_requirements_blob": "a117936f6eaf3db1f87a1f08e46e0f84e77ca42c",
+  "unchanged_stage1_blob": "4f0cd2d53e8f26923b99790b98d3b7e48830ff2a",
+  "accepted_full_cases": 0,
+  "accepted_short_cases": 0,
+  "target_model_runs": 0,
+  "next_asset": "A17"
+}

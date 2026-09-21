@@ -1,0 +1,147 @@
+{
+  "asset_id": "A11",
+  "asset_name": "FaithEval",
+  "inspection_date": "2026-09-21",
+  "q01_status": "first_pass_recorded_conditional_context_faithfulness_candidate",
+  "completion_scope": "Source/protocol review and four displayed record inspections; two full short contexts, two truncated. No complete dataset acquisition, all-label audit, formal acceptance, or model runs.",
+  "code_source": {
+    "repository": "SalesforceAIResearch/FaithEval",
+    "default_branch": "master",
+    "revision": "58d35840e3fbc7bf4b7672582a417b3b3a327dec",
+    "readme_blob_sha": "78e5de53ae807484dc40f96fa2a146e4301f3826",
+    "readme_bytes": 11208,
+    "readme_local_blob_verified": true,
+    "license_file": "LICENSE.txt",
+    "license_display": "Apache-2.0",
+    "standalone_python_evaluator_in_inspected_tree": false,
+    "scorer_scope": "README quick-start U/I matching example only"
+  },
+  "paper": {
+    "id": "2410.03727",
+    "revision": "v3",
+    "url": "https://arxiv.org/html/2410.03727v3",
+    "publication": "ICLR 2025"
+  },
+  "datasets": [
+    {
+      "task": "unanswerable",
+      "repository": "Salesforce/FaithEval-unanswerable-v1.0",
+      "metadata_head_observed": "4a14e0e9860e270a8c9ff57c511821f4f50dce57",
+      "rows_publisher_metadata": 2492,
+      "data_path": "data/test-00000-of-00001.parquet",
+      "publisher_parquet_sha256": "b6f22ea87c49dad2a8f7d001a9f71e3b59c7747fcbffdd1078fc5a22ac8e7f86",
+      "publisher_hash_page": "https://huggingface.co/datasets/Salesforce/FaithEval-unanswerable-v1.0/blob/main/data/test-00000-of-00001.parquet",
+      "local_parquet_download_complete": false,
+      "local_sha256_verified": false,
+      "record_view_ref": "main",
+      "record_view_is_pinned_byte_verification": false,
+      "license_field_observed": false
+    },
+    {
+      "task": "inconsistent",
+      "repository": "Salesforce/FaithEval-inconsistent-v1.0",
+      "metadata_head_observed": "e29508db3955db2c82a80a1f3c3aadc11f93fc3f",
+      "rows_publisher_metadata": 1500,
+      "data_path": "data/test-00000-of-00001.parquet",
+      "publisher_parquet_sha256": "a4fd32a58c28267bc3b217a6006af68d95f354568f42702ba18d9b8c76fffa15",
+      "publisher_hash_page": "https://huggingface.co/datasets/Salesforce/FaithEval-inconsistent-v1.0/blob/main/data/test-00000-of-00001.parquet",
+      "local_parquet_download_complete": false,
+      "local_sha256_verified": false,
+      "record_view_ref": "main",
+      "record_view_is_pinned_byte_verification": false,
+      "license_field_observed": false
+    },
+    {
+      "task": "counterfactual",
+      "repository": "Salesforce/FaithEval-counterfactual-v1.0",
+      "metadata_head_observed": "e655f7c8750aabe431eeeda63fa5c019a2567b18",
+      "rows_publisher_metadata": 1000,
+      "data_path": "data/test-00000-of-00001.parquet",
+      "publisher_parquet_sha256": "325723f478d62b1d107d1d90fb6587f0ed0f2f42d08fea13569a53b45402ef18",
+      "publisher_hash_page": "https://huggingface.co/datasets/Salesforce/FaithEval-counterfactual-v1.0/blob/main/data/test-00000-of-00001.parquet",
+      "local_parquet_download_complete": false,
+      "local_sha256_verified": false,
+      "record_view_ref": "main",
+      "record_view_is_pinned_byte_verification": false,
+      "license_field_observed": false
+    }
+  ],
+  "total_rows_from_publisher_metadata": 4992,
+  "rows_locally_counted": null,
+  "mapping": {
+    "B08": "direct_narrow_context_answerability",
+    "B09": "direct_narrow_context_support_not_citation_or_source_independence",
+    "B14": "direct_narrow_missing_or_conflicting_context",
+    "B10": "R_context_utilization_only_no_retrieval",
+    "B02": "not_established",
+    "B03": "not_established",
+    "B06": "not_established",
+    "B07": "not_established",
+    "B11": "not_established"
+  },
+  "record_inspections": [
+    {
+      "task": "unanswerable",
+      "qid": "4d34e1d759844a3a8b60fe75199310e2",
+      "visibility": "displayed_short_context_complete",
+      "decision": "candidate_context_lacks_requested_designer",
+      "formal_accepted": false
+    },
+    {
+      "task": "unanswerable",
+      "qid": "bd4ac80e6ab34822bd30bc62c0aa84f0",
+      "visibility": "displayed_short_context_complete",
+      "decision": "candidate_context_lacks_requested_guest_performers",
+      "formal_accepted": false
+    },
+    {
+      "task": "inconsistent",
+      "qid": "55ec33bd05b84c6c82c42743d70e219d",
+      "visibility": "context_truncated",
+      "decision": "hold_full_evidence_audit; answers_are_competing_values_not_aliases",
+      "formal_accepted": false
+    },
+    {
+      "task": "counterfactual",
+      "qid": "Mercury_7175875",
+      "visibility": "context_truncated",
+      "decision": "hold_full_support_and_alternative_choice_audit",
+      "formal_accepted": false
+    }
+  ],
+  "case_identity": "asset/task/revision/qid; preserve source-question-family dependencies",
+  "scorer": {
+    "upstream_example_adopted_unchanged": false,
+    "reason": "substring matching cannot separate negated marker, answer selection, and semantic abstention",
+    "strict_flag_is_exact_equality": false,
+    "probe_count": 12,
+    "probe_scope": "authored matcher probes, not target model outputs",
+    "results_path": "data/q01/A11_local_checks.json",
+    "script_path": "scripts/q01/check_faitheval_contract.py",
+    "formal_project_scorer_implemented": false
+  },
+  "rights": {
+    "repository_license_display": "Apache-2.0",
+    "hf_cards_explicit_license_field_observed": false,
+    "research_purpose_notice_observed": true,
+    "dataset_redistribution_translation": "hold_pending_scope_and_underlying_material_check",
+    "upstream_data_redistributed_here": false
+  },
+  "public_short": {
+    "potential": "selected_text_cases_candidate_only",
+    "manual_web_execution_verified_cases": 0,
+    "rights_and_execution_eligible_cases": 0,
+    "independent_short_created": false
+  },
+  "accepted_full_cases": 0,
+  "accepted_short_cases": 0,
+  "target_model_runs": 0,
+  "next_steps": [
+    "pin_download_verify_full_parquets",
+    "audit_selected_full_contexts_and_labels",
+    "separate_task_specific_answer_semantics",
+    "validate_positive_negative_controls_and_semantic_grader",
+    "resolve_dataset_rights_and_manual_execution"
+  ],
+  "next_asset": "A17"
+}

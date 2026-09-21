@@ -1,0 +1,49 @@
+{
+  "repository": "Nyukimin/llm-cognitive-reliability-eval",
+  "remote_base_commit_checked": "90289d4b4a44dabc19621c99a82dcef3c4fcca0d",
+  "remote_write_performed": false,
+  "patch_sha256": "5678684125fa97413c493d36c0adf57635eab7d773cc8eb2083777d9162f1f83",
+  "expected_base_blobs": {
+    "data/q01/progress.json": "18d4d99a4495013912ed05f8f7c497e051d5a564",
+    "research/q01/README.md": "8b9677d9fa88f7cdca330f21fa5e888253b4b59d"
+  },
+  "files": [
+    {
+      "path": "data/q01/A11_faitheval.json",
+      "bytes": 6212,
+      "sha256": "943fd05ac3ca10a0203cd9d9c9912505f90f7bcd52b5952bf5b53e7ba5fe9dd7",
+      "git_blob_sha": "0a94b832670b9b3ec1d8ab44a7bc99f01686bccc"
+    },
+    {
+      "path": "data/q01/A11_local_checks.json",
+      "bytes": 5183,
+      "sha256": "20d704d30a160e2343d520ec9f7a0876c04ad2fe36b98270f685692aae7b89fc",
+      "git_blob_sha": "f6d0182c6bcbbf3eb7f8bdc309a8ce8f12d5f6bd"
+    },
+    {
+      "path": "data/q01/progress.json",
+      "bytes": 1635,
+      "sha256": "9a81f4d3564c70c098288cd885edb7c31a7cfed0e85ac66b629f2dd04fa209aa",
+      "git_blob_sha": "de7d75cb4ffeb07e643e0012c009ca9cd9899d79"
+    },
+    {
+      "path": "research/q01/A11_faitheval_adoption.md",
+      "bytes": 14482,
+      "sha256": "bc7469d7efcafacd1f4300c7be508ca9f98cac8edfa22ca1220d87444a74f1d9",
+      "git_blob_sha": "1e1ed74a78689763494556859ecdcc2073bd5647"
+    },
+    {
+      "path": "research/q01/README.md",
+      "bytes": 4352,
+      "sha256": "a97deb9221d000fcd8574e00f75a45055bff2b050306d5207c62a6eb1d37444c",
+      "git_blob_sha": "8657bcfd4b62a8435c508e77e8c4c086d08260b7"
+    },
+    {
+      "path": "scripts/q01/check_faitheval_contract.py",
+      "bytes": 7438,
+      "sha256": "3bb79d2a5541f16bf644072b4478067a9dc2a7dadd0a38984c7b8e3728041498",
+      "git_blob_sha": "8c52ec0f5b135a6aea594940bdf7be97c45c73fe"
+    }
+  ],
+  "no_changes_to_requirements_or_stage1": true
+}

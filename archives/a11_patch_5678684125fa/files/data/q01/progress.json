@@ -19,16 +19,6 @@
     "A06": "LongMemEval cleaned v1 accepted as a case-source candidate with mandatory case-level label audit; central B06 historical-fidelity gap remains open.",
     "A09": "Sycophancy Eval accepted as direct B05 case/protocol source; primary denominator is initially-correct answers under unsupported challenge; current Inspect truthfulness metric not adopted unchanged.",
     "A10": "Belief-R update/maintain protocol conditionally retained; original case adoption held pending semantics/label audit. Four representative records reviewed; isolated parser and truth-table checks executed, not target-model tests. Complete CSV acquisition/hash verification remains pending.",
-    "A11": "FaithEval retained as a conditional fixed-context source for B08/B09/B14. Twelve synthetic README-matcher probes executed via an equivalent independent implementation; no target models run. Full dataset acquisition, case-label audit and redistribution scope remain pending."
-  },
-  "artifact_reconciliation": {
-    "A11": {
-      "status": "content_reconciled_checks_recorded",
-      "decision": "research/q01/A11_reconciliation.md",
-      "record": "data/q01/A11_reconciliation.json",
-      "checks": "data/q01/A11_reconciliation_checks.json",
-      "supplied_patch_status": "superseded_do_not_apply",
-      "historical_operation_cause": "unresolved_not_inferred"
-    }
+    "A11": "FaithEval retained as a conditional fixed-context B08/B09/B14 source. Two complete displayed unanswerable contexts and two partial records inspected; 12 isolated README matcher probes executed. Unchanged substring scoring rejected for formal semantic use. Complete parquet acquisition, label audit, and dataset-specific redistribution terms remain pending. No target-model runs."
   }
 }

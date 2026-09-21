@@ -1,0 +1,21 @@
+{
+  "validation_scope": "Local artifact consistency, upstream README matcher probes, touched-file patch application only",
+  "remote_base_commit_checked": "90289d4b4a44dabc19621c99a82dcef3c4fcca0d",
+  "remote_write_performed": false,
+  "upstream_readme_git_blob_match": true,
+  "matcher_probe_results_reproduced": true,
+  "matcher_probe_count": 12,
+  "tampered_readme_rejected": {
+    "exit_code": 1,
+    "stderr": "A11 audit failed: Upstream README differs from the pinned Git blob"
+  },
+  "baseline_touched_file_blobs_match_connector": true,
+  "patch_touches_only_expected_files": true,
+  "patch_check_exit_code": 0,
+  "patch_applied_files_identical_to_payload": true,
+  "second_application_rejected": true,
+  "whole_repository_tests_run": false,
+  "target_model_runs": 0,
+  "full_dataset_local_downloads": 0,
+  "formal_cases_accepted": 0
+}
