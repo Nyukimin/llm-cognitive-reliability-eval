@@ -61,19 +61,25 @@
 | 項目 | 内容 |
 | --- | --- |
 | 種別 | 固定履歴ベンチマーク |
-| 確認対象 | 論文v2（2025）／公開リポジトリ |
-| 一次資料上の記述 | 提示された会話履歴への最終応答で、指示保持、情報の推論利用、版を指定した編集、自己一貫性を評価する。 |
-| 本件の対応候補 | B01, B05, B06, B10, B11 |
-| そのまま測れない部分 | 自身が生成した過去応答を含むライブ対話ではない。版編集が修正後の全要件退行検査を保証するわけでもない。 |
-| 採否案 | 固定記録レーンの優先候補。ケースと権利の確認後に採否を決める。 |
-| 権利の確認状況 | 確認したREADMEに明確なライセンス表示を見つけられず、データの再配布・翻訳を保留。 |
-| 簡易版との関係 | 公式の包含関係が確認できるShortは未確認。 |
-| 今回読んだ範囲 | 一次論文の要旨・該当節／公式READMEの記載を確認。採点実装の通読・実行は未実施。 |
-| 版の固定・導入実行 | 原コミット未固定。データの正式取込み・試験実行なし。 |
+| 確認対象 | ACL 2025論文、Scale Labs現行方法論・2026更新、ScaleAI/MultiChallenge、旧GitHub実装を区別。 |
+| 一次資料上の記述 | Instruction Retention、Inference Memory、Reliable Versioned Editing、Self-Coherenceの4軸。2026更新では約54タスクの曖昧さを修正し、JudgeをGemini 2.5 Proへ変更。 |
+| 本件の対応候補 | B01（狭い直接対応）, B05（ケース単位）, B10（固定履歴で直接）, B11（部分対応）。B06は直接充足と数えない。 |
+| そのまま測れない部分 | 自身が生成したライブ対話や別セッションMemoryではない。更新後に過去の第一候補・当時の判断を正しく報告するB06や、自己誤り発見後の依存修正全体を直接測ったとは扱わない。 |
+| 採否案 | **ケース精査用資産として採用。** 現行ScaleAI 266件を優先し、旧GitHub 273件は歴史的実装参照とする。Fullへの個別ケース採用は別ゲート。 |
+| 権利の確認状況 | 現行ScaleAIデータセットカードはCC BY 4.0。共有・改変時は帰属、ライセンスリンク、変更表示が必要。旧GitHub固定コミットにはLICENSEファイルが見当たらないため、旧273件を公開用の権利根拠にしない。 |
+| 簡易版との関係 | 公開Short候補にできる可能性は高いが、Fullへ個別ケースを正式受入れしてから抽出する。日本語化・短縮は派生ケースとして別受入れ。 |
+| 今回読んだ範囲 | Scale Labs leaderboard/update、ScaleAI dataset/commit history、ACL論文記録、旧GitHubの全273件の機械集計とREADME/evaluator/data loaderを確認。現行266件の全ラベル監査・Judge互換再現は未実施。 |
+| 版の固定・導入実行 | 現行データのファイルrevision `9d9e0fd9ef535fb71df41740b2e9e6bdb0aa7ac3`、確認時metadata head `670fd81f270314d0f8f82b34fcfe2187fd28f699`。旧GitHub参照 `5ccefcca6a39020d66c1383c4e6a809cb07afa33`。対象LLMの試験実行なし。 |
 
 一次資料：
-- <https://arxiv.org/html/2501.17399v2>
+- <https://labs.scale.com/leaderboard/multichallenge>
+- <https://labs.scale.com/blog/multichallenge-update>
+- <https://huggingface.co/datasets/ScaleAI/MultiChallenge>
+- <https://aclanthology.org/2025.findings-acl.958/>
 - <https://github.com/ekwinox117/multi-challenge>
+- <https://creativecommons.org/licenses/by/4.0/>
+
+Q01詳細：`research/q01/A04_multichallenge_adoption.md`
 
 ## A05 Multi-IF
 
