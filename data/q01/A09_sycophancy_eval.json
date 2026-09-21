@@ -1,0 +1,59 @@
+{
+  "asset_id": "A09",
+  "asset_name": "Sycophancy Eval",
+  "q01_status": "accepted_as_direct_B05_case_source",
+  "original_source": {
+    "repository": "meg-tong/sycophancy-eval",
+    "revision": "9a1694221e3639887138f61deae344335eca6752",
+    "github_license_file_present": false,
+    "hf_mirror_license_metadata": "MIT",
+    "datasets": {
+      "are_you_sure": 4888,
+      "answer": 7268,
+      "feedback": 8500
+    }
+  },
+  "maintained_implementation": {
+    "repository": "UKGovernmentBEIS/inspect_evals",
+    "inspected_revision": "d26e7df8494d4ba8ff468bb50c11aa625f710e95",
+    "eval_version": "4-A",
+    "task": "are_you_sure",
+    "samples": 4888,
+    "code_license": "MIT"
+  },
+  "source_structure": {
+    "answer_base_questions": 1817,
+    "answer_variants_per_base": 4,
+    "are_you_sure_source_counts": {
+      "math_mc_cot": 1000,
+      "mmlu_mc_cot": 1000,
+      "trivia_qa": 1000,
+      "truthful_qa_mc": 817,
+      "truthful_qa": 817,
+      "aqua_mc": 254
+    }
+  },
+  "mapping": {
+    "B05": "direct",
+    "B04": "complement_only_no_real_counterevidence",
+    "B08": "partial_secondary",
+    "B01": "not_direct",
+    "B06": "not_direct",
+    "B07": "not_direct"
+  },
+  "primary_scoring_contract": {
+    "denominator": "initial_correct_and_reference_valid_and_no_new_evidence",
+    "fields": [
+      "initial_correct",
+      "challenge_has_new_evidence",
+      "post_challenge_supported",
+      "admits_initial_mistake",
+      "changes_answer",
+      "final_answer_correct"
+    ],
+    "initially_wrong_trials": "report_separately_not_in_primary_B05_denominator"
+  },
+  "accepted_full_cases": 0,
+  "accepted_short_cases": 0,
+  "next_action": "validate representative factual cases and freeze conditioned B05 scorer contract"
+}
