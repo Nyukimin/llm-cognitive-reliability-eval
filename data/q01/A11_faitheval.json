@@ -1,0 +1,122 @@
+{
+  "asset_id": "A11",
+  "asset_name": "FaithEval",
+  "inspection_date": "2026-09-21",
+  "q01_status": "conditional_source_candidate_initial_review_recorded",
+  "completion_scope": "Source/protocol and documented matcher audit; not complete record ingestion, formal case acceptance or model testing.",
+  "upstream": {
+    "repository": "SalesforceAIResearch/FaithEval",
+    "branch": "master",
+    "revision": "58d35840e3fbc7bf4b7672582a417b3b3a327dec",
+    "readme_blob": "78e5de53ae807484dc40f96fa2a146e4301f3826",
+    "repository_license": "Apache-2.0",
+    "complete_script_in_inspected_tree": false,
+    "paper": "2410.03727v3"
+  },
+  "dataset_sources": [
+    {
+      "task": "unanswerable",
+      "dataset": "Salesforce/FaithEval-unanswerable-v1.0",
+      "observed_head": "4a14e0e9860e270a8c9ff57c511821f4f50dce57",
+      "card_test_rows": 2492
+    },
+    {
+      "task": "inconsistent",
+      "dataset": "Salesforce/FaithEval-inconsistent-v1.0",
+      "observed_head": "e29508db3955db2c82a80a1f3c3aadc11f93fc3f",
+      "card_test_rows": 1500
+    },
+    {
+      "task": "counterfactual",
+      "dataset": "Salesforce/FaithEval-counterfactual-v1.0",
+      "observed_head": "e655f7c8750aabe431eeeda63fa5c019a2567b18",
+      "card_test_rows": 1000
+    }
+  ],
+  "dataset_total": {
+    "value": 4992,
+    "basis": "sum_of_dataset_card_counts_not_local_row_count"
+  },
+  "acquisition": {
+    "readme": "full_text_via_github_connector",
+    "dataset_cards": "read_with_head_identifiers",
+    "record_previews": "main_display_not_hashed_record_bytes",
+    "full_parquet_acquired": false,
+    "dataset_content_sha256": null,
+    "attempted_paths": "local HTTP DNS failure; web API and expanded-row routes unavailable"
+  },
+  "mapping": {
+    "B08": "direct_narrow_context_answerability",
+    "B09": "direct_narrow_context_faithfulness_not_citation_or_source_independence",
+    "B14": "partial_insufficiency_and_conflict_not_clarification_dialogue",
+    "B10": "secondary_fixed_context_only",
+    "B02": "direct_coverage_not_established",
+    "B03": "direct_coverage_not_established",
+    "B06": "direct_coverage_not_established",
+    "B07": "direct_coverage_not_established",
+    "B11": "direct_coverage_not_established"
+  },
+  "scorer": {
+    "readme_matcher_adopted_unchanged": false,
+    "official_full_score_reproduced": false,
+    "test_script": "scripts/q01/check_faitheval_contract.py",
+    "test_result": "data/q01/A11_local_checks.json",
+    "execution_method": "independent_equivalent_reimplementation_not_verbatim_upstream_execution",
+    "synthetic_probes": 12,
+    "false_positive_witnesses_non_strict": [
+      "U03",
+      "U04",
+      "U05",
+      "I02",
+      "I03"
+    ],
+    "false_positive_witnesses_strict": [
+      "U03",
+      "I02",
+      "I03"
+    ],
+    "semantics_format_separated": true
+  },
+  "required_contract": {
+    "target_input_excludes": [
+      "answers",
+      "answer",
+      "answerKey",
+      "justification",
+      "scoring_result"
+    ],
+    "inconsistent_answers_meaning": "conflicting_content_not_acceptable_single_answers",
+    "answerable_and_consistent_controls_required": true,
+    "contextual_vs_world_truth_separated": true,
+    "R_not_M_or_D": true
+  },
+  "redistribute_data": "hold_pending_explicit_scope_and_underlying_material_checks",
+  "hf_card_license_field": "not_present_in_three_inspected_cards",
+  "manual_web_execution": "not_tested",
+  "representative_previews": [
+    {
+      "task": "unanswerable",
+      "id": "55ec33bd05b84c6c82c42743d70e219d",
+      "status": "full_context_audit_pending"
+    },
+    {
+      "task": "inconsistent",
+      "id": "55ec33bd05b84c6c82c42743d70e219d",
+      "status": "conflicting_answer_schema_observed_full_context_pending"
+    },
+    {
+      "task": "unanswerable",
+      "id": "62ea01d5c1504bd89ce4236d40b0ef8b",
+      "status": "classification_granularity_requires_audit"
+    },
+    {
+      "task": "counterfactual",
+      "id": "Mercury_7175875",
+      "status": "modified_answer_choice_alignment_seen_full_support_unverified"
+    }
+  ],
+  "accepted_full_cases": 0,
+  "accepted_short_cases": 0,
+  "target_model_runs": 0,
+  "next_action_for_asset": "Acquire pinned bytes; verify rights and individual labels; construct and audit controls, input projection and semantics-aware scoring before formal acceptance."
+}

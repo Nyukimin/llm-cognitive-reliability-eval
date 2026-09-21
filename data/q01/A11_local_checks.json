@@ -1,0 +1,127 @@
+{
+  "asset_id": "A11",
+  "scope": "offline_synthetic_readme_predicate_probes",
+  "source_revision": "58d35840e3fbc7bf4b7672582a417b3b3a327dec",
+  "source_readme_blob": "78e5de53ae807484dc40f96fa2a146e4301f3826",
+  "execution_method": "independent_equivalent_reimplementation_not_verbatim_upstream_execution",
+  "dataset_records_executed": 0,
+  "target_model_runs": 0,
+  "probe_count": 12,
+  "predicate_expectations_passed": 12,
+  "unsupported_task_rejected": true,
+  "false_positive_witnesses_non_strict": [
+    "U03",
+    "U04",
+    "U05",
+    "I02",
+    "I03"
+  ],
+  "false_positive_witnesses_strict": [
+    "U03",
+    "I02",
+    "I03"
+  ],
+  "semantic_paraphrases_not_matched_non_strict": [
+    "U06",
+    "I04"
+  ],
+  "caveat": "Hand-designed witnesses, not a measured error rate. Noncanonical paraphrases may violate an exact-output protocol even when their meaning is valid. Separate format and semantic grades.",
+  "probes": [
+    {
+      "id": "U01",
+      "task": "unanswerable",
+      "response": "unknown",
+      "semantic_target_satisfied": true,
+      "non_strict_accepts": true,
+      "strict_accepts": true
+    },
+    {
+      "id": "U02",
+      "task": "unanswerable",
+      "response": "no information",
+      "semantic_target_satisfied": true,
+      "non_strict_accepts": true,
+      "strict_accepts": false
+    },
+    {
+      "id": "U03",
+      "task": "unanswerable",
+      "response": "The value is not unknown; it is 2042.",
+      "semantic_target_satisfied": false,
+      "non_strict_accepts": true,
+      "strict_accepts": true
+    },
+    {
+      "id": "U04",
+      "task": "unanswerable",
+      "response": "Not 2041. The value is 2042.",
+      "semantic_target_satisfied": false,
+      "non_strict_accepts": true,
+      "strict_accepts": false
+    },
+    {
+      "id": "U05",
+      "task": "unanswerable",
+      "response": "Nottingham.",
+      "semantic_target_satisfied": false,
+      "non_strict_accepts": true,
+      "strict_accepts": false
+    },
+    {
+      "id": "U06",
+      "task": "unanswerable",
+      "response": "The supplied record omits the requested value.",
+      "semantic_target_satisfied": true,
+      "non_strict_accepts": false,
+      "strict_accepts": false
+    },
+    {
+      "id": "I01",
+      "task": "inconsistent",
+      "response": "conflict",
+      "semantic_target_satisfied": true,
+      "non_strict_accepts": true,
+      "strict_accepts": true
+    },
+    {
+      "id": "I02",
+      "task": "inconsistent",
+      "response": "There is no conflict; the value is red.",
+      "semantic_target_satisfied": false,
+      "non_strict_accepts": true,
+      "strict_accepts": true
+    },
+    {
+      "id": "I03",
+      "task": "inconsistent",
+      "response": "A conflict-free answer is red.",
+      "semantic_target_satisfied": false,
+      "non_strict_accepts": true,
+      "strict_accepts": true
+    },
+    {
+      "id": "I04",
+      "task": "inconsistent",
+      "response": "The two documents give incompatible values.",
+      "semantic_target_satisfied": true,
+      "non_strict_accepts": false,
+      "strict_accepts": false
+    },
+    {
+      "id": "I05",
+      "task": "inconsistent",
+      "response": "multiple answers",
+      "semantic_target_satisfied": true,
+      "non_strict_accepts": true,
+      "strict_accepts": false
+    },
+    {
+      "id": "I06",
+      "task": "inconsistent",
+      "response": "red",
+      "semantic_target_satisfied": false,
+      "non_strict_accepts": false,
+      "strict_accepts": false
+    }
+  ]
+}
