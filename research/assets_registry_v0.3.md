@@ -100,24 +100,28 @@ Q01詳細：`research/q01/A04_multichallenge_adoption.md`
 - <https://arxiv.org/abs/2410.15553>
 - <https://github.com/facebookresearch/Multi-IF>
 
-## A06 LongMemEval（元版・cleaned）
+## A06 LongMemEval（cleaned v1）
 
 | 項目 | 内容 |
 | --- | --- |
 | 種別 | 会話記憶ベンチマーク |
-| 確認対象 | ICLR 2025の元版。READMEの2025/09 cleaned案内と2026/05 V2案内を確認。 |
-| 一次資料上の記述 | 情報抽出、複数セッション推論、情報更新、時間推論、回答保留を扱い、oracle等の条件も提供する。 |
-| 本件の対応候補 | B04, B06, B08, B10 |
-| そのまま測れない部分 | 現在情報への更新と、過去の自己判断の後付けは同じ測定ではない。oracleで成功しても製品の記憶取得成功ではない。 B06との関係は隣接候補であり、更新後も過去の第一候補を正しく報告する直接採点は未確認。 |
-| 採否案 | 時間・取得条件の比較に優先候補。元版とV2を別資産として維持。 |
-| 権利の確認状況 | リポジトリはMIT表示。配布データの条件は別途確認。 |
-| 簡易版との関係 | s/m/oracleは情報量や与え方が異なる。無条件にShort⊆Fullとは扱わない。 115kトークンはREADMEでのS条件（Llama 3換算）の目安であり、全条件の長さではない。oracleは証拠セッションのみで、手動適合性は個別ケースで確認する。 |
-| 今回読んだ範囲 | 一次論文の要旨・該当節／公式READMEの記載を確認。採点実装の通読・実行は未実施。 |
-| 版の固定・導入実行 | 原コミット未固定。データの正式取込み・試験実行なし。 |
+| 確認対象 | ICLR 2025論文、現行cleanedデータ、公式GitHub実装。LongMemEval-V2はA07として別管理。 |
+| 一次資料上の記述 | 500問で、Information Extraction、Multi-Session Reasoning、Knowledge Updates、Temporal Reasoning、Abstentionを評価。データ型は single-session-user / assistant / preference、temporal-reasoning、knowledge-update、multi-session。 |
+| 本件の対応候補 | B04（knowledge-update）、B08（abstention）、B10（履歴利用）。B06はsingle-session-assistantによる過去assistant発言の再利用に限定した部分対応。 |
+| そのまま測れない部分 | knowledge-updateは現時点の更新答えを測るもので、更新後に過去の第一候補・旧判断・旧理由を正確に報告できるかは測らない。native product Memory取得と、履歴を外部注入する試験も同一ではない。 |
+| 採否案 | **ケース精査用資産として採用。** cleaned v1を優先。Oracle/S/Mを別条件として扱い、個別ケースのラベルを監査後にFull採用を決める。 |
+| 権利の確認状況 | GitHub実装とcleaned Hugging FaceデータはいずれもMIT表示。改変・再配布時は出所・変更を記録する。 |
+| 簡易版との関係 | Oracleは短い固定履歴ケースの候補。S/Mは長大で手動Webの共通経路には不向きな場合がある。短縮・日本語化は派生ケースとして別受入れ。 |
+| 今回読んだ範囲 | README、LICENSE、公式QA evaluator、集計コード、cleaned dataset card/commit、ICLR論文、公式Issueのラベル不整合報告を確認。cleaned全500問の個別ラベル監査・対象LLM実行は未実施。 |
+| 版の固定・導入実行 | cleaned HF revision `98d7416c24c778c2fee6e6f3006e7a073259d48f`。Oracle SHA256 `821a2034...`、S cleaned `d6f21ea9...`、M cleaned `9d79e552...`。公式repo参照 `9e0b455f4ef0e2ab8f2e582289761153549043fc`。 |
 
 一次資料：
-- <https://xiaowu0162.github.io/long-mem-eval/>
 - <https://github.com/xiaowu0162/LongMemEval>
+- <https://huggingface.co/datasets/xiaowu0162/longmemeval-cleaned>
+- <https://huggingface.co/datasets/xiaowu0162/longmemeval-cleaned/commit/98d7416c24c778c2fee6e6f3006e7a073259d48f>
+- <https://arxiv.org/abs/2410.10813>
+
+Q01詳細：`research/q01/A06_longmemeval_adoption.md`
 
 ## A07 LongMemEval-V2
 
