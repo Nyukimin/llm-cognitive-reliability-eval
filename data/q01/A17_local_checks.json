@@ -1,0 +1,49 @@
+{
+  "asset_id": "A17",
+  "scope": "offline_pinned_formatter_projection",
+  "upstream_revision": "2c618bb98db3c8526433e22d8a2f7320f10a7470",
+  "source_git_blob": "bb5975cfbaf2b3bfabe4028fdc009ac38ebe256d",
+  "source_bytes": 2028,
+  "jinja2_version": "3.1.6",
+  "execution_method": "isolated_upstream_AST_constant_and_function",
+  "template_variables": [
+    "response"
+  ],
+  "synthetic_pairs": [
+    {
+      "id": "P01",
+      "same_response_different_inquiry_and_documents": true,
+      "judge_prompts_identical": true,
+      "inquiry_and_document_omitted": true,
+      "prompt_sha256": "8f2ec67df16a25f5d51605d4c331fce8448fb88121326582b8cdfda10cf095e1"
+    },
+    {
+      "id": "P02",
+      "same_response_different_inquiry_and_documents": true,
+      "judge_prompts_identical": true,
+      "inquiry_and_document_omitted": true,
+      "prompt_sha256": "ac523dd40bc55576c0ca16641b4dd0c49f82cd01efc5fc2ffeeebac0b5953dc1"
+    },
+    {
+      "id": "P03",
+      "same_response_different_inquiry_and_documents": true,
+      "judge_prompts_identical": true,
+      "inquiry_and_document_omitted": true,
+      "prompt_sha256": "f36e6d21452cf8d24e6213e877965d1ffec0146f99dd4e7087b78d73a4c99d73"
+    }
+  ],
+  "response_change_reaches_prompt": true,
+  "modified_source_rejected": true,
+  "missing_response_rejected": true,
+  "target_model_runs": 0,
+  "judge_model_runs": 0,
+  "dataset_records_executed": 0,
+  "accepted_full_cases": 0,
+  "accepted_short_cases": 0,
+  "limitations": [
+    "No empirical judge accuracy or error frequency measured.",
+    "Synthetic semantic contrasts are design examples, not human-validated labels.",
+    "Identical prompts prove missing distinguishing inputs, not the judge verdict.",
+    "No complete upstream pipeline or published scores reproduced."
+  ]
+}

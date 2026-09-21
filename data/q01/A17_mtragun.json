@@ -1,0 +1,66 @@
+{
+  "asset_id": "A17",
+  "asset_name": "MTRAG-UN",
+  "inspection_date": "2026-09-21",
+  "q01_status": "conditional_source_protocol_initial_review_recorded",
+  "completion_scope": "Source/protocol and isolated formatter audit; not full case ingestion, label acceptance or model evaluation.",
+  "upstream": {
+    "repository": "IBM/mt-rag-benchmark",
+    "revision": "2c618bb98db3c8526433e22d8a2f7320f10a7470",
+    "paper": "2602.23184v1",
+    "repository_license": "Apache-2.0",
+    "readme_blob": "ef9aea679272981df600431cd44328c7ab76aec8",
+    "reference_blob": "1a11c239db1662ed77de437add5bc83403fbced0",
+    "reference_bytes_from_api": 3836136
+  },
+  "release_scope": {
+    "paper_reported_tasks": 666,
+    "paper_reported_domains": 6,
+    "banking_telco": "coming_soon_per_pinned_readme",
+    "local_reference_row_count": null,
+    "local_dataset_hash_verified": false,
+    "all_case_labels_audited": false,
+    "reference_blob_response_received": true,
+    "local_bulk_download": "unsuccessful"
+  },
+  "mapping": {
+    "B14": "strong_candidate_requires_necessity_relevance_grading",
+    "B08": "conditional_answerability_and_abstention",
+    "B09": "partial_context_faithfulness",
+    "B10": "reference_reading_and_retrieval_separate",
+    "B01": "adjacent_not_full_goal_retention",
+    "B02": "not_established",
+    "B03": "not_established",
+    "B06": "not_established",
+    "B07": "not_established",
+    "B11": "not_established"
+  },
+  "judge": {
+    "source_blob": "bb5975cfbaf2b3bfabe4028fdc009ac38ebe256d",
+    "template_inputs": [
+      "response"
+    ],
+    "inquiry_in_prompt": false,
+    "reference_documents_in_prompt": false,
+    "adopt_unchanged_as_full_B14_scorer": false,
+    "local_checks": "data/q01/A17_local_checks.json",
+    "checker": "scripts/q01/check_mtragun_contract.py",
+    "synthetic_contrast_pairs": 3,
+    "target_or_judge_models_called": 0
+  },
+  "required_before_formal_adoption": [
+    "pin and parse complete selected records; compare content hashes",
+    "verify available task/domain counts without substituting paper totals",
+    "audit required and unnecessary clarification with history and evidence",
+    "keep allowed interpretations and assumption-based responses separate from mere question detection",
+    "separate fixed history, live dialogue and retrieval",
+    "exclude target answers and scoring annotations from target input",
+    "verify selected source material permissions and manual execution",
+    "validate scorers with independent reference labels and unused controls"
+  ],
+  "accepted_full_cases": 0,
+  "accepted_short_cases": 0,
+  "target_model_runs": 0,
+  "manual_web_cases_verified": 0,
+  "next_action": "Case-level intake across six inspected assets plus targeted Q02 gap review; no new Short before accepted Full."
+}
