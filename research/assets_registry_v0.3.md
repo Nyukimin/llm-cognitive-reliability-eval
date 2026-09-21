@@ -165,15 +165,15 @@ Q01詳細：`research/q01/A06_longmemeval_adoption.md`
 | 項目 | 内容 |
 | --- | --- |
 | 種別 | 迎合の行動試験 |
-| 確認対象 | 論文v4、原SycophancyEval固定commit、同一所有者のHugging Face mirror、Inspect Evals版4-Aを区別。 |
-| 一次資料上の記述 | ユーザーの見解・異議が、事実回答や評価に与える迎合を調べる。原データは are_you_sure 4,888件、answer 7,268件、feedback 8,500件。 |
-| 本件の対応候補 | **B05へ直接対応。** are_you_sureは初期正答後の根拠なし反論、answerは同一1,817問の4種ユーザー信念提示を対照化できる。B04は真の反証がないため補助のみ。 |
-| そのまま測れない部分 | 初期誤答を維持することを「迎合耐性」として加点しない。正当な要件変更、本人の好み、実際の反証は別条件。feedbackの評価的・感情的迎合を外部事実の誤りと同一視しない。B06履歴忠実性は直接測らない。 |
-| 採否案 | **B05のケース精査用資産として採用。** are_you_sureを主、answerのペア変形を副候補。feedbackはcore B05から保留。実装はInspect Evals 4-Aを優先参照し、採点契約は本プロジェクト用に版管理する。 |
-| 権利の確認状況 | 原GitHubにはLICENSEファイルなし。同一所有者のHF mirrorはMIT metadataを明記。Inspect EvalsコードはMIT。公開ケースではHF mirrorのライセンス由来と原データ出所を両方記録する。 |
-| 簡易版との関係 | 短いテキスト対話でWeb手動実施に向く。選定ケースは参照答えを独立検証し、英語原版から抽出。日本語化は派生ケースとして別受入れ。 |
-| 今回読んだ範囲 | 原README/utils/notebook、3 JSONL全件の構造集計、論文v4、Inspect Evals README/solver/scorer/loader/changelog、HF mirror license metadataを確認。対象LLMの実行と個別参照答えの監査は未実施。 |
-| 版の固定・導入実行 | 原data `9a1694221e3639887138f61deae344335eca6752`、Inspect Evals参照 `d26e7df8494d4ba8ff468bb50c11aa625f710e95` / eval version `4-A`。 |
+| 確認対象 | Sharma et al. 論文v4、元GitHubデータ、同一作者のHugging Face mirror、Inspect Evalsの現行 `are_you_sure` 実装。 |
+| 一次資料上の記述 | ユーザーの意見・異議・好みがモデル応答を真実よりユーザー側へ寄せるsycophancyを、複数の自由回答課題で評価。 `are_you_sure` は初回回答後に根拠なしの異議を与える。 |
+| 本件の対応候補 | B05に強く直接対応。B04は対照設計の片側としてのみ利用し、実証拠を与える更新条件は別資産または派生ケースで作る。B08は副次。 |
+| そのまま測れない部分 | 現行Inspectの `truthfulness` は初回正誤と「間違いを認めたか」の組であり、2回目の最終事実回答の正しさ自体を完全には採点しない。謝罪表現をB05失敗そのものにしない。 |
+| 採否案 | **B05の直接ケース供給元・実験プロトコルとして採用。** 最初は `are_you_sure` を優先し、`answer` は別介入条件、`feedback` は補助領域として扱う。 |
+| 権利の確認状況 | 元GitHub treeにはLICENSEなし。同一作者のHugging Face mirrorはMIT metadata。Inspect EvalsのコードもMITだが、コードのライセンスを元データへ自動適用しない。 |
+| 簡易版との関係 | 短いWeb対話で実施しやすくShort候補として有望。ただし元ケースの事実ラベル、権利、翻訳、採点をFullで先に受入れる。 |
+| 今回読んだ範囲 | 元README/コード、3 JSONLを全件機械集計、論文v4、Inspect Evals v4-Aのsolver/scorer/changelog、Anthropicの別sycophancyデータのライセンスを確認。対象モデルの実行なし。 |
+| 版の固定・導入実行 | 元データ revision `9a1694221e3639887138f61deae344335eca6752`。Inspect Evals参照 `d26e7df8494d4ba8ff468bb50c11aa625f710e95` / eval version `4-A`。正式Fullケース0件。 |
 
 一次資料：
 - <https://github.com/meg-tong/sycophancy-eval>
