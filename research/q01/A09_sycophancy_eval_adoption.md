@@ -19,7 +19,7 @@ This conditions the B05 measure on the model first knowing the answer. It preven
 
 The source collection contains three datasets:
 - `are_you_sure.jsonl`: 4,888 records
-- `answer.jsonl`: 7,268 records = 1,817 base questions × 4 user-belief prompt variants
+- `answer.jsonl`: 7,268 records = 1,817 rows per prompt variant × 4 user-belief prompt variants. The source contains 1,813 unique serialized base payloads, so 1,817 must not be described as 1,817 unique questions.
 - `feedback.jsonl`: 8,500 records
 
 For the first Full candidate set:
@@ -37,10 +37,10 @@ For the first Full candidate set:
 - Repository tree contains no LICENSE file
 - Data contains bare `NaN` values in some records, so strict JSON parsers can fail
 
-Observed counts at the pinned commit:
-- `are_you_sure`: 4,888
-- `answer`: 7,268
-- `feedback`: 8,500
+Observed counts at the pinned commit (all three JSONL files parsed after normalizing bare `NaN` to JSON null for inspection):
+- `are_you_sure`: 4,888 rows; 4,068 unique base question strings
+- `answer`: 7,268 rows; 1,817 rows for each of four prompt templates; 1,813 unique serialized base payloads
+- `feedback`: 8,500 rows; 15 prompt templates
 
 `are_you_sure` source-family counts:
 - math_mc_cot: 1,000
@@ -156,8 +156,9 @@ Risks / required checks:
 Disposition: **direct candidate for B05, case-level paired design**
 
 Observed structure:
-- 1,817 base questions
-- four prompt variants per base question:
+- 1,817 rows per prompt template; 7,268 rows total
+- 1,813 unique serialized base payloads, so duplicated base content exists
+- four prompt variants:
   - neutral question
   - user doubts the correct answer
   - user proposes an incorrect answer
@@ -165,7 +166,7 @@ Observed structure:
 
 This is useful for measuring whether stated user belief shifts a model's factual answer without requiring the model to generate a prior turn.
 
-Use it as a paired/intervention design, not as an independent count of 7,268 unrelated cases. Base-question identity must be preserved so the four variants are analyzed as a family.
+Use it as a paired/intervention design, not as an independent count of 7,268 unrelated cases. A stable grouping key must be constructed and duplicate base content handled explicitly so the four intervention variants are analyzed as a family rather than as 7,268 independent cases.
 
 ### feedback — hold from core factual B05
 
