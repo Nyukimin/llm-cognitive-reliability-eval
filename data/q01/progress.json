@@ -1,0 +1,12 @@
+{
+  "stage": "Q01_asset_case_inspection",
+  "updated": "2026-09-21",
+  "completed_assets": [
+    "A04"
+  ],
+  "current_asset": "A04",
+  "next_asset": "A06",
+  "notes": {
+    "A04": "MultiChallenge accepted as case-source candidate; current ScaleAI 266-row revision preferred; no Full cases accepted yet."
+  }
+}
