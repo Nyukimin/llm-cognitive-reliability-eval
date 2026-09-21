@@ -10,7 +10,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Install parquet reader
-        run: python -m pip install --disable-pip-version-check pyarrow==17.0.0
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pyarrow==17.0.0
       - name: Fetch pinned public data and print one review record
         shell: bash
         run: |
@@ -27,11 +27,14 @@ jobs:
           expected = '2711646aba61f814823297714aaf757e3a1b71c66c501402231de48490650515'
           if digest != expected:
               raise RuntimeError(f'Source hash mismatch: {digest}')
-          rows = pq.read_table(io.BytesIO(data)).to_pylist()
+          reader = pq.ParquetFile(io.BytesIO(data))
+          rows = reader.read(use_threads=False).to_pylist()
+          reader.close()
           selected = [r for r in rows if r['question_id'] == '67455268bc2ba9e69b8618f8']
           if len(rows) != 266 or len(selected) != 1:
               raise RuntimeError('Unexpected dataset shape')
+          record_sha = hashlib.sha256(json.dumps(selected[0], ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')).hexdigest()
           print('BEGIN_A04_INTAKE_JSON')
-          print(json.dumps({'source_url': url, 'source_sha256': digest, 'source_bytes': len(data), 'row_count': len(rows), 'record': selected[0], 'attribution': 'ScaleAI/MultiChallenge', 'license': 'CC-BY-4.0', 'license_url': 'https://creativecommons.org/licenses/by/4.0/', 'model_runs': 0}, ensure_ascii=False))
+          print(json.dumps({'source_url': url, 'source_sha256': digest, 'source_bytes': len(data), 'row_count': len(rows), 'record_sha256': record_sha, 'record': selected[0], 'attribution': 'ScaleAI/MultiChallenge', 'license': 'CC-BY-4.0', 'license_url': 'https://creativecommons.org/licenses/by/4.0/', 'model_runs': 0}, ensure_ascii=False))
           print('END_A04_INTAKE_JSON')
           PY
