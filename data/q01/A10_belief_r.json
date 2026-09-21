@@ -1,0 +1,117 @@
+{
+  "asset_id": "A10",
+  "asset_name": "Belief-R",
+  "inspection_date": "2026-09-21",
+  "q01_status": "conditional_protocol_reference_original_case_adoption_hold",
+  "completion_scope": "source_protocol_review_and_targeted_checks_only",
+  "source": {
+    "repository": "HLTCHKUST/belief-revision",
+    "revision": "e9cec77b14e7deea9d26b3b04c41fc08ab2094e3",
+    "dataset_blobs": {
+      "basic_time_t.csv": "e64b1db6fa6260459ad8681a2fe966e8d6dcf8a0",
+      "queries_time_t1.csv": "727a1ad3306f27ecd1e25fe1ef892503a202b730"
+    },
+    "parser_blob_verified_locally": "c9fd905feb10c2d4a699013c2cf821251c18fcbf"
+  },
+  "data_distribution": {
+    "dataset": "CAiRE/belief_r",
+    "metadata_revision_observed": "3719f5804c63318037465fecf298a7fd78d99121",
+    "data_introduction_commit": "52794c1578418afc87be008735f0448ced10c04f",
+    "record_content_access": "web_raw_main_not_complete_byte_verified_snapshot",
+    "full_bytes_hash_verified": false,
+    "github_hf_complete_equivalence_verified": false,
+    "full_dataset_parsed": false,
+    "language": "en",
+    "license_metadata": "CC-BY-SA-4.0",
+    "source_card": "https://huggingface.co/datasets/CAiRE/belief_r/blob/main/README.md"
+  },
+  "published_statistics": {
+    "source": "EMNLP 2024 paper Table 2",
+    "basic_time_t": 1912,
+    "time_t1": 1744,
+    "belief_update": 1074,
+    "belief_maintain": 670,
+    "total_rows_by_addition": 3656,
+    "independently_counted_from_csv": false,
+    "not_independent_dialogue_count": true
+  },
+  "mapping": {
+    "B04": "conditional_defeasible_context_update_protocol_semantics_audit_required",
+    "B02": "auxiliary_premise_interpretation_only",
+    "B08": "auxiliary_yes_no_uncertain_with_explicit_semantics",
+    "B03": "not_direct",
+    "B05": "not_direct",
+    "B06": "not_direct",
+    "B07": "not_direct",
+    "B11": "not_direct"
+  },
+  "inspected_record_selectors": [
+    {
+      "step": "time_t",
+      "modus": "ponens",
+      "dataset_id": "0-strong",
+      "upstream_label": "a",
+      "decision": "initial_inference_candidate_not_revision_alone"
+    },
+    {
+      "step": "time_t1",
+      "modus": "ponens",
+      "dataset_id": "0-strong",
+      "upstream_label": "c",
+      "decision": "hold_competing_sufficient_vs_necessary_condition_readings"
+    },
+    {
+      "step": "time_t1",
+      "modus": "ponens",
+      "dataset_id": "0-weak",
+      "upstream_label": "a",
+      "decision": "maintain_candidate_pair_semantics_pending"
+    },
+    {
+      "step": "time_t1",
+      "modus": "ponens",
+      "dataset_id": "8-strong",
+      "upstream_label": "a",
+      "decision": "strong_suffix_is_not_a_BU_label"
+    }
+  ],
+  "selector_global_uniqueness_verified": false,
+  "sampling_is_representative": false,
+  "execution_findings": {
+    "api_protocol": "independent_single_requests_not_live_prior_response_conditioning",
+    "live_dialogue": "requires_separately_accepted_derived_protocol",
+    "local_time_t1_runner": "third_premise_omitted_by_observed_branch_static_finding",
+    "static_finding_reproduced_on_gpu": false,
+    "historical_paper_runs_attribution": "not_established",
+    "unused_loader_is_not_main_api_loader": true,
+    "upstream_full_runner_executed": false
+  },
+  "scoring": {
+    "upstream_BU_BM_BREU": "protocol_reference_not_unmodified_formal_adoption",
+    "reasoning_semantics_requires_review": true,
+    "parse_errors_separate_from_substantive_errors": true,
+    "A09_A10_unmatched_scores_are_not_a_matched_intervention": true,
+    "local_checks": "data/q01/A10_local_checks.json"
+  },
+  "rights": {
+    "dataset_declaration": "CC-BY-SA-4.0",
+    "github_license_file_present": false,
+    "code_reuse_clearance": "not_confirmed",
+    "redistribution_of_upstream_dataset_or_source_in_this_commit": false,
+    "derived_dataset_conditions": "attribution_license_link_change_notice_sharealike_scope_review",
+    "project_root_license_changed": false
+  },
+  "accepted_full_cases": 0,
+  "accepted_short_cases": 0,
+  "target_model_runs": 0,
+  "pending": [
+    "complete_pinned_data_download_hash_and_source_equivalence",
+    "case_family_and_label_audit",
+    "explicit_semantics_and_acceptable_alternative_answers",
+    "derived_D_protocol_if_used",
+    "runner_input_and_scorer_validation",
+    "public_case_rights_and_manual_route_acceptance"
+  ],
+  "report": "research/q01/A10_belief_r_adoption.md",
+  "next_asset": "A11"
+}

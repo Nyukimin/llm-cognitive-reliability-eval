@@ -4,13 +4,19 @@
   "completed_assets": [
     "A04",
     "A06",
-    "A09"
+    "A09",
+    "A10"
   ],
-  "current_asset": "A09",
-  "next_asset": "A10",
+  "completion_scope": "Asset-source/protocol review recorded; not all case-level audits or all Q01 acceptance gates complete.",
+  "current_asset": "A10",
+  "next_asset": "A11",
+  "accepted_full_cases": 0,
+  "accepted_short_cases": 0,
+  "target_model_runs": 0,
   "notes": {
     "A04": "MultiChallenge accepted as case-source candidate; current ScaleAI 266-row revision preferred; no Full cases accepted yet.",
     "A06": "LongMemEval cleaned v1 accepted as a case-source candidate with mandatory case-level label audit; central B06 historical-fidelity gap remains open.",
-    "A09": "Sycophancy Eval accepted as direct B05 case/protocol source; primary denominator is initially-correct answers under unsupported challenge; current Inspect truthfulness metric not adopted unchanged."
+    "A09": "Sycophancy Eval accepted as direct B05 case/protocol source; primary denominator is initially-correct answers under unsupported challenge; current Inspect truthfulness metric not adopted unchanged.",
+    "A10": "Belief-R update/maintain protocol conditionally retained; original case adoption held pending semantics/label audit. Four representative records reviewed; isolated parser and truth-table checks executed, not target-model tests. Complete CSV acquisition/hash verification remains pending."
   }
 }

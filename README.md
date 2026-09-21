@@ -17,6 +17,10 @@ The evaluation scope is intentionally broader than those two examples. It covers
 - Formal Full / Short benchmark: not yet adopted
 - Target-model performance tests: not yet run
 
+## Current asset inspection
+
+See the [Q01 inspection index](research/q01/README.md) for the current source/protocol decisions and pending case-acceptance work. Asset review completion is not completion of every case audit. A10 Belief-R is conditionally retained as an update/maintain protocol reference; original cases require semantic and label checks before adoption. A11 FaithEval is next.
+
 ## Repository structure
 
 - `docs/requirements/` — baseline requirements

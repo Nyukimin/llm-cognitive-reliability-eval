@@ -1,0 +1,62 @@
+{
+  "asset_id": "A10",
+  "scope": "isolated_parser_and_formal_truth_tables",
+  "upstream_revision": "e9cec77b14e7deea9d26b3b04c41fc08ab2094e3",
+  "parser_git_blob_sha": "c9fd905feb10c2d4a699013c2cf821251c18fcbf",
+  "observations": {
+    "parser": [
+      {
+        "input": "Final Answer [a].",
+        "observed_output": "a"
+      },
+      {
+        "input": "Final Answer [c].",
+        "observed_output": "c"
+      },
+      {
+        "input": "Final Answer [z].",
+        "observed_output": "z"
+      },
+      {
+        "input": "12345678901a",
+        "observed_output": "a"
+      }
+    ],
+    "logic": [
+      {
+        "mode": "ponens",
+        "semantics": "material_implication",
+        "satisfying_assignments": 2,
+        "initial_conclusion_remains_entailed": true
+      },
+      {
+        "mode": "ponens",
+        "semantics": "explicit_rule_replacement",
+        "satisfying_assignments": 3,
+        "initial_conclusion_remains_entailed": false
+      },
+      {
+        "mode": "tollens",
+        "semantics": "material_implication",
+        "satisfying_assignments": 1,
+        "initial_conclusion_remains_entailed": true
+      },
+      {
+        "mode": "tollens",
+        "semantics": "explicit_rule_replacement",
+        "satisfying_assignments": 3,
+        "initial_conclusion_remains_entailed": false
+      }
+    ]
+  },
+  "assertions_passed": 8,
+  "findings": [
+    "parser_accepts_out_of_range_z",
+    "parser_can_accept_missing_marker",
+    "adding_a_sufficient_condition_does_not_retract_literal_entailment"
+  ],
+  "target_model_runs": 0,
+  "full_dataset_parsed": false,
+  "upstream_full_runner_executed": false,
+  "limitations": "These are engineering/semantics checks, not validation of all natural-language labels or LLM performance."
+}
