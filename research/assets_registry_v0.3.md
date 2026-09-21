@@ -165,19 +165,23 @@ Q01詳細：`research/q01/A06_longmemeval_adoption.md`
 | 項目 | 内容 |
 | --- | --- |
 | 種別 | 迎合の行動試験 |
-| 確認対象 | 論文v4（2025）と公開データリポジトリ |
-| 一次資料上の記述 | ユーザーの見解・異議などが、自由回答や評価に及ぼす迎合を調べる。 |
-| 本件の対応候補 | B05, B04 |
-| そのまま測れない部分 | 正当な要件変更や真の訂正まで迎合にしてはいけない。外部事実と本人の希望を分離する必要がある。 |
-| 採否案 | 根拠なしの異議の対照に優先候補。Belief-Rと比較条件を接続する。 |
-| 権利の確認状況 | リポジトリの所在を確認。データ・コードの許諾は未確定。 |
-| 簡易版との関係 | 公式Shortの包含関係は未確認。 |
-| 今回読んだ範囲 | 一次論文の要旨・該当節／公式READMEの記載を確認。採点実装の通読・実行は未実施。 |
-| 版の固定・導入実行 | 原コミット未固定。データの正式取込み・試験実行なし。 |
+| 確認対象 | 論文v4、原SycophancyEval固定commit、同一所有者のHugging Face mirror、Inspect Evals版4-Aを区別。 |
+| 一次資料上の記述 | ユーザーの見解・異議が、事実回答や評価に与える迎合を調べる。原データは are_you_sure 4,888件、answer 7,268件、feedback 8,500件。 |
+| 本件の対応候補 | **B05へ直接対応。** are_you_sureは初期正答後の根拠なし反論、answerは同一1,817問の4種ユーザー信念提示を対照化できる。B04は真の反証がないため補助のみ。 |
+| そのまま測れない部分 | 初期誤答を維持することを「迎合耐性」として加点しない。正当な要件変更、本人の好み、実際の反証は別条件。feedbackの評価的・感情的迎合を外部事実の誤りと同一視しない。B06履歴忠実性は直接測らない。 |
+| 採否案 | **B05のケース精査用資産として採用。** are_you_sureを主、answerのペア変形を副候補。feedbackはcore B05から保留。実装はInspect Evals 4-Aを優先参照し、採点契約は本プロジェクト用に版管理する。 |
+| 権利の確認状況 | 原GitHubにはLICENSEファイルなし。同一所有者のHF mirrorはMIT metadataを明記。Inspect EvalsコードはMIT。公開ケースではHF mirrorのライセンス由来と原データ出所を両方記録する。 |
+| 簡易版との関係 | 短いテキスト対話でWeb手動実施に向く。選定ケースは参照答えを独立検証し、英語原版から抽出。日本語化は派生ケースとして別受入れ。 |
+| 今回読んだ範囲 | 原README/utils/notebook、3 JSONL全件の構造集計、論文v4、Inspect Evals README/solver/scorer/loader/changelog、HF mirror license metadataを確認。対象LLMの実行と個別参照答えの監査は未実施。 |
+| 版の固定・導入実行 | 原data `9a1694221e3639887138f61deae344335eca6752`、Inspect Evals参照 `d26e7df8494d4ba8ff468bb50c11aa625f710e95` / eval version `4-A`。 |
 
 一次資料：
-- <https://arxiv.org/html/2310.13548v4>
 - <https://github.com/meg-tong/sycophancy-eval>
+- <https://huggingface.co/datasets/meg-tong/sycophancy-eval>
+- <https://arxiv.org/abs/2310.13548>
+- <https://github.com/UKGovernmentBEIS/inspect_evals/tree/main/src/inspect_evals/sycophancy>
+
+Q01詳細：`research/q01/A09_sycophancy_eval_adoption.md`
 
 ## A10 Belief-R
 
