@@ -1,0 +1,49 @@
+{
+  "source_url": "https://huggingface.co/datasets/ScaleAI/MultiChallenge/resolve/670fd81f270314d0f8f82b34fcfe2187fd28f699/data/test-00000-of-00001.parquet",
+  "source_sha256": "2711646aba61f814823297714aaf757e3a1b71c66c501402231de48490650515",
+  "source_bytes": 975319,
+  "row_count": 266,
+  "record_sha256": "3291e34578dc39d3a17aa97a7f1f9062f0cff7f94c3482a380015bbba7cbbbc0",
+  "record": {
+    "question_id": "67455268bc2ba9e69b8618f8",
+    "axis": "INSTRUCTION_RETENTION",
+    "conversation": {
+      "role": [
+        "user",
+        "assistant",
+        "user"
+      ],
+      "content": [
+        "I have some questions about sociological issues. Please try to find theories or predicaments that explain these issues.  Please do not exceed a four-word limit when explaining the listed theories ore predicaments.",
+        "1. Social Inequality: Karl Marx - Class Struggle\n2. Racial Discrimination: Critical Race Theory - Systemic Racism\n3. Gender Inequality: Feminist Theory - Patriarchal Society\n4. Crime: Strain Theory - Social Structure\n5. Education: Functionalism - Social Reproduction\n6. Globalization: World Systems Theory - Core-Periphery\n7. Urbanization: Human Ecology Theory - Urban Growth\n8. Aging: Disengagement Theory - Aging Process\n9. Family: Symbolic Interactionism - Meaning Construction\n10. Religion: Secularization Theory - Religious Decline\n\n",
+        "Please explain how cultural values shape social inclusion dynamics by determining norms, attitudes, and behaviors toward diverse groups. "
+      ]
+    },
+    "target_question": "Does the model answer the questions by listing theories or predicaments with a four-word limit when explaining the listed theories or predicaments?",
+    "pass_criteria": "YES",
+    "num_turns": 3
+  },
+  "attribution": "ScaleAI/MultiChallenge",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "changes": "One row extracted. Message text and source rubric unchanged. Metadata for acquisition and review added.",
+  "acquisition": {
+    "run_id": 35580582154,
+    "job_id": 106272277679,
+    "workflow_commit": "76efbc15a48b6ce0da44697fa8db0f760ee5444a",
+    "conclusion": "success",
+    "environment": "GitHub Actions; numpy 1.26.4; pyarrow 17.0.0",
+    "source_bytes_verified_in": "GitHub Actions job, not the local container",
+    "log_url": "https://github.com/Nyukimin/llm-cognitive-reliability-eval/actions/runs/35580582154",
+    "local_capture_verification": "Canonical record hash matches the hash printed in successful job output."
+  },
+  "earlier_attempt": {
+    "run_id": 35580447700,
+    "job_id": 106271852134,
+    "conclusion": "failure",
+    "exit_code": 134,
+    "scope": "Data and record were printed before process abort; not reported as a successful run.",
+    "cause": "not isolated; dependencies and reader lifecycle were both changed before successful retry"
+  },
+  "model_runs": 0
+}

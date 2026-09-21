@@ -1,5 +1,5 @@
 {
-  "stage": "Q01_asset_case_inspection",
+  "stage": "Q01_case_level_intake",
   "updated": "2026-09-21",
   "completed_assets": [
     "A04",
@@ -10,7 +10,7 @@
     "A17"
   ],
   "completion_scope": "Asset-source/protocol review recorded; not all case-level audits or all Q01 acceptance gates complete.",
-  "current_asset": "A17",
+  "current_asset": "A04",
   "next_asset": null,
   "accepted_full_cases": 0,
   "accepted_short_cases": 0,
@@ -36,7 +36,7 @@
   "next_work_item": {
     "stage": "Q01_case_level_intake",
     "first_asset": "A04",
-    "task": "Inspect selected current MultiChallenge records with full input, reference, permissions and controls; retain Q02 priority gaps.",
+    "task": "Validate A04-IR-001 semantic rubric and controls on actual outputs; inspect the remaining A04 candidate records without dropping Q02 priority gaps.",
     "q02_priority_gaps": [
       "B02",
       "B03",
@@ -44,5 +44,18 @@
       "B07",
       "B11"
     ]
+  },
+  "case_intake": {
+    "registered_candidates": 1,
+    "candidate_ids": [
+      "A04-IR-001"
+    ],
+    "record": "data/q01/case_reviews/A04_IR001_source.json",
+    "review": "research/q01/cases/A04_IR001_review.md",
+    "checks": "data/q01/case_reviews/A04_IR001_checks.json",
+    "full_source_record_verified": true,
+    "local_tests_passed": 27,
+    "source_acquisition_run": 35580582154,
+    "status": "candidate_registered_semantic_and_target_execution_gates_pending"
   }
 }

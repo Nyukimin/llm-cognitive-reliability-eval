@@ -1,0 +1,123 @@
+{
+  "source_case_id": "67455268bc2ba9e69b8618f8",
+  "status": "candidate_requires_semantic_and_execution_review",
+  "mode": "R_fixed_record",
+  "prior_assistant_messages_generated_by_target": false,
+  "target_input": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "I have some questions about sociological issues. Please try to find theories or predicaments that explain these issues.  Please do not exceed a four-word limit when explaining the listed theories ore predicaments."
+      },
+      {
+        "role": "assistant",
+        "content": "1. Social Inequality: Karl Marx - Class Struggle\n2. Racial Discrimination: Critical Race Theory - Systemic Racism\n3. Gender Inequality: Feminist Theory - Patriarchal Society\n4. Crime: Strain Theory - Social Structure\n5. Education: Functionalism - Social Reproduction\n6. Globalization: World Systems Theory - Core-Periphery\n7. Urbanization: Human Ecology Theory - Urban Growth\n8. Aging: Disengagement Theory - Aging Process\n9. Family: Symbolic Interactionism - Meaning Construction\n10. Religion: Secularization Theory - Religious Decline\n\n"
+      },
+      {
+        "role": "user",
+        "content": "Please explain how cultural values shape social inclusion dynamics by determining norms, attitudes, and behaviors toward diverse groups. "
+      }
+    ]
+  },
+  "scoring_only": {
+    "target_question": "Does the model answer the questions by listing theories or predicaments with a four-word limit when explaining the listed theories or predicaments?",
+    "pass_criteria": "YES"
+  },
+  "source_record_sha256": "3291e34578dc39d3a17aa97a7f1f9062f0cff7f94c3482a380015bbba7cbbbc0",
+  "formal_full_accepted": false,
+  "formal_short_accepted": false,
+  "source": {
+    "source_url": "https://huggingface.co/datasets/ScaleAI/MultiChallenge/resolve/670fd81f270314d0f8f82b34fcfe2187fd28f699/data/test-00000-of-00001.parquet",
+    "source_sha256": "2711646aba61f814823297714aaf757e3a1b71c66c501402231de48490650515",
+    "record_sha256": "3291e34578dc39d3a17aa97a7f1f9062f0cff7f94c3482a380015bbba7cbbbc0",
+    "attribution": "ScaleAI/MultiChallenge",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "One row extracted. Message text and source rubric unchanged. Metadata for acquisition and review added.",
+    "acquisition": {
+      "run_id": 35580582154,
+      "job_id": 106272277679,
+      "workflow_commit": "76efbc15a48b6ce0da44697fa8db0f760ee5444a",
+      "conclusion": "success",
+      "environment": "GitHub Actions; numpy 1.26.4; pyarrow 17.0.0",
+      "source_bytes_verified_in": "GitHub Actions job, not the local container",
+      "log_url": "https://github.com/Nyukimin/llm-cognitive-reliability-eval/actions/runs/35580582154",
+      "local_capture_verification": "Canonical record hash matches the hash printed in successful job output."
+    }
+  },
+  "case_id": "A04-IR-001",
+  "case_version": "candidate-0.1",
+  "behavior_ids": [
+    "B01"
+  ],
+  "coverage_limit": "Explicit explanation-length retention only; not problem reframing, historical beliefs, or cross-session memory.",
+  "scoring_contract": {
+    "status": "draft_not_validated_on_target_outputs",
+    "requirements": [
+      {
+        "id": "R1",
+        "meaning": "Address the current question about cultural values and social inclusion",
+        "check": "semantic_review"
+      },
+      {
+        "id": "R2",
+        "meaning": "Use relevant theories or predicaments without treating the earlier list as mandatory",
+        "check": "semantic_review; accept noncanonical but valid wording"
+      },
+      {
+        "id": "R3",
+        "meaning": "At most four words in each explanation, not in the whole response",
+        "check": "reviewed spans plus length diagnostic"
+      }
+    ],
+    "word_segmentation": "Unambiguous ASCII words counted; hyphens/apostrophes/other boundaries deferred, not automatically failed.",
+    "output_format": "Original free response; JSON is the case container, not a new instruction to the target.",
+    "length_pass_is_not_B01_pass": true,
+    "source_supplied_prior_response_is_not_target_behavior": true,
+    "scope_and_content_review_required": true
+  },
+  "normal_and_adverse_controls": [
+    {
+      "id": "C1",
+      "description": "Relevant multiple items, each explanation <=4 words; total response may exceed four",
+      "status": "diagnostic structure; semantic labels pending"
+    },
+    {
+      "id": "C2",
+      "description": "One explanation of five plain words",
+      "status": "length diagnostic implemented"
+    },
+    {
+      "id": "C3",
+      "description": "Four words unrelated to the question, or only an empty list",
+      "status": "must not become a whole-task pass"
+    },
+    {
+      "id": "C4",
+      "description": "Theory label longer than four words plus a short explanation",
+      "status": "label length alone not this requirement violation"
+    },
+    {
+      "id": "C5",
+      "description": "Explicit later removal of limit",
+      "status": "planned derived condition; not an executed source case"
+    },
+    {
+      "id": "C6",
+      "description": "Same final question with limit restated near it",
+      "status": "planned contrast; prompt differs, requires own candidate ID"
+    }
+  ],
+  "acceptance": {
+    "source_identity_and_full_input": "verified",
+    "technical_projection": "tested",
+    "semantic_rubric": "draft",
+    "word_boundary_policy": "restricted_diagnostic_only",
+    "manual_web_adapter": "not_executed",
+    "target_execution": "not_executed",
+    "independent_review": "not_done",
+    "formal_full_accepted": false,
+    "formal_short_accepted": false
+  },
+  "exposure": "Public source; development use recorded. Not an unseen holdout."
+}

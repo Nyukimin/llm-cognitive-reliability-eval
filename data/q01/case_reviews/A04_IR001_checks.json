@@ -1,0 +1,22 @@
+{
+  "scope": "offline_intake_projection_and_length_diagnostics_not_model_evaluation",
+  "tests_run": 27,
+  "failures": 0,
+  "errors": 0,
+  "target_model_runs": 0,
+  "formal_full_cases_added": 0,
+  "candidate_cases_registered": 1,
+  "real_source_capture_hash_checked": true,
+  "real_parquet_reader_tested_locally": false,
+  "parquet_acquisition_run": 35580582154,
+  "script_sha256": "6cbf0207013a62401b4ae80a4de54b28d431ba74dcbb33e2f98a62c6479784ca",
+  "tests_sha256": "41fef1557af1a66f9f61919b1b2114442c83c04322d9bf8afa23b829948bdb54",
+  "python_version": "3.13.5",
+  "output": "test_ambiguous_tokenization (test_multichallenge_case_contract.ContractTests.test_ambiguous_tokenization) ... ok\ntest_columnar_conversation (test_multichallenge_case_contract.ContractTests.test_columnar_conversation) ... ok\ntest_each_explanation_separately (test_multichallenge_case_contract.ContractTests.test_each_explanation_separately) ... ok\ntest_empty_explanation (test_multichallenge_case_contract.ContractTests.test_empty_explanation) ... ok\ntest_five_words (test_multichallenge_case_contract.ContractTests.test_five_words) ... ok\ntest_four_words (test_multichallenge_case_contract.ContractTests.test_four_words) ... ok\ntest_gold_excluded (test_multichallenge_case_contract.ContractTests.test_gold_excluded) ... ok\ntest_input_projection_does_not_mutate_source (test_multichallenge_case_contract.ContractTests.test_input_projection_does_not_mutate_source) ... ok\ntest_invalid_span (test_multichallenge_case_contract.ContractTests.test_invalid_span) ... ok\ntest_mid_word (test_multichallenge_case_contract.ContractTests.test_mid_word) ... ok\ntest_misaligned_columns (test_multichallenge_case_contract.ContractTests.test_misaligned_columns) ... ok\ntest_missing_annotations (test_multichallenge_case_contract.ContractTests.test_missing_annotations) ... ok\ntest_missing_message (test_multichallenge_case_contract.ContractTests.test_missing_message) ... ok\ntest_missing_rubric (test_multichallenge_case_contract.ContractTests.test_missing_rubric) ... ok\ntest_modified_snapshot_rejected (test_multichallenge_case_contract.ContractTests.test_modified_snapshot_rejected) ... ok\ntest_overlapping_spans (test_multichallenge_case_contract.ContractTests.test_overlapping_spans) ... ok\ntest_pinned_real_record_capture (test_multichallenge_case_contract.ContractTests.test_pinned_real_record_capture) ... ok\ntest_snapshot_source_pointer_tampering (test_multichallenge_case_contract.ContractTests.test_snapshot_source_pointer_tampering) ... ok\ntest_source_hash (test_multichallenge_case_contract.ContractTests.test_source_hash) ... ok\ntest_title_not_explanation (test_multichallenge_case_contract.ContractTests.test_title_not_explanation) ... ok\ntest_unreviewed_boundaries (test_multichallenge_case_contract.ContractTests.test_unreviewed_boundaries) ... ok\ntest_word_limit_is_not_task_success (test_multichallenge_case_contract.ContractTests.test_word_limit_is_not_task_success) ... ok\ntest_wrong_axis (test_multichallenge_case_contract.ContractTests.test_wrong_axis) ... ok\ntest_wrong_id (test_multichallenge_case_contract.ContractTests.test_wrong_id) ... ok\ntest_wrong_response_hash (test_multichallenge_case_contract.ContractTests.test_wrong_response_hash) ... ok\ntest_wrong_speaker (test_multichallenge_case_contract.ContractTests.test_wrong_speaker) ... ok\ntest_wrong_turn_count (test_multichallenge_case_contract.ContractTests.test_wrong_turn_count) ... ok\n\n----------------------------------------------------------------------\nRan 27 tests in 0.002s\n\nOK\n",
+  "limits": [
+    "Human semantic adequacy not assessed",
+    "Span completeness is a reviewer assertion",
+    "Restricted word counter is not the upstream official scorer",
+    "Successful acquisition is not a target-model test"
+  ]
+}
