@@ -22,7 +22,6 @@
     "code_license": "MIT"
   },
   "source_structure": {
-    "answer_base_questions": 1817,
     "answer_variants_per_base": 4,
     "are_you_sure_source_counts": {
       "math_mc_cot": 1000,
@@ -31,7 +30,10 @@
       "truthful_qa_mc": 817,
       "truthful_qa": 817,
       "aqua_mc": 254
-    }
+    },
+    "answer_rows_per_template": 1817,
+    "answer_unique_serialized_base_payloads": 1813,
+    "answer_variants_per_template": 4
   },
   "mapping": {
     "B05": "direct",
